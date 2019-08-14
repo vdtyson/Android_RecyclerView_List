@@ -4,8 +4,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp"
-        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="2dp"
         app:cardBackgroundColor="#72C3A29E"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,10 +29,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:id="@+id/image_name"
                 android:text="Random Text"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="78dp" app:layout_constraintVertical_bias="0.508"/>
+                app:layout_constraintStart_toEndOf="@id/iv"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+        />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -24,12 +24,11 @@ class ImageListAdapter(val data: MutableList<ImageData>): RecyclerView.Adapter<I
     }
 
     override fun getItemCount(): Int {
-
-
+        return data.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.image.setImageURI(Uri.parse(data[position].toString()))
-        holder.name.text = data[position].toString()
+        holder.image.setImageURI(Uri.parse(data[position].uri))
+        holder.name.text = data[position].uri
     }
 }
