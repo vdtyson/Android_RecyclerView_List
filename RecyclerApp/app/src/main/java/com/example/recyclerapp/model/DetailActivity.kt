@@ -32,4 +32,5 @@ class DetailActivity : AppCompatActivity() {
         detail_iv.setImageURI(Uri.parse(uri))
         detail_tv.text = uri
     }
+
 }

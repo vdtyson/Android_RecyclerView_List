@@ -28,9 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-        window.enterTransition = Slide()
-        window.exitTransition = Fade()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

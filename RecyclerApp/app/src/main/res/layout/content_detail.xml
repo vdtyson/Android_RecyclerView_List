@@ -11,9 +11,11 @@
     tools:showIn="@layout/activity_detail">
 
     <ImageView
+        android:scaleType="centerCrop"
+        android:transitionName="shared_image"
         android:id="@+id/detail_iv"
         android:layout_width="match_parent"
-        android:layout_height="80dp" />
+        android:layout_height="100dp" />
     <TextView
         android:id="@+id/detail_tv"
         android:layout_width="match_parent"

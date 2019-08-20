@@ -49,10 +49,9 @@ class ImageListAdapter(val data: MutableList<ImageData>): RecyclerView.Adapter<I
             val recyclerIntent = Intent(view.context, DetailActivity::class.java)
 
             recyclerIntent.putExtra("IMAGE_URI", data[position].uri)
-            val optionsBundle: Bundle = ActivityOptions.makeSceneTransitionAnimation(view.context as Activity).toBundle()
+            val optionsBundle: Bundle = ActivityOptions.makeSceneTransitionAnimation(view.context as Activity, holder.image, "shared_image").toBundle()
 
             view.context.startActivity(recyclerIntent, optionsBundle)
-
         }
         setEnterAnimation(holder.cardView, position)
     }
