@@ -5,6 +5,10 @@ import android.content.Intent
 import android.content.Intent.ACTION_GET_CONTENT
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.Explode
+import android.transition.Fade
+import android.transition.Slide
+import android.view.Window
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerapp.R
@@ -14,6 +18,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
+
     companion object {
         const val IMAGE_REQUEST_CODE = 0
     }
@@ -21,8 +27,15 @@ class MainActivity : AppCompatActivity() {
     var imgList: ArrayList<ImageData> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+        window.enterTransition = Slide()
+        window.exitTransition = Fade()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         get_image_button.setOnClickListener {
             val intent = Intent(ACTION_GET_CONTENT)
